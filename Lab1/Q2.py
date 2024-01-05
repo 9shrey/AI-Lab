@@ -19,9 +19,16 @@ class Graph:
 
     def print_adj_matrix(self):
         print("\nAdjacency Matrix:")
-        matrix = [[0] * len(self.nodes) for _ in range(len(self.nodes))]
-        node_index = {node: i for i, node in enumerate(sorted(self.nodes))}
-        
+        matrix = []
+        for _ in range(len(self.nodes)):
+            row = [0] * len(self.nodes) 
+            matrix.append(row)
+            
+        sorted_nodes = sorted(self.nodes)
+        node_index = {}
+        for i, node in enumerate(sorted_nodes):
+            node_index[node] = i
+
         for node_from, i in self.adj_list.items():
             for node_to, value in i:
                 matrix[node_index[node_from]][node_index[node_to]] = value
