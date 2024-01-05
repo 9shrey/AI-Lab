@@ -53,8 +53,9 @@ if __name__ == '__main__':
 	r = insert(r, 66)
 	r = insert(r, 90)
 
+	print("Inorder traversal of the given tree: ")
 	inorder(r)
-	print("\n")
+	print("\nPreorder traversal of the given tree: ")
 	printPreorder(r)
-	print("\n")
+	print("\nPostorder traversal of the given tree:")
 	printPostorder(r)
