@@ -12,9 +12,6 @@ class Graph:
         else:
             self.adj_list[node_from] = [(node_to, value)]
 
-        if node_to not in self.adj_list:
-            self.adj_list[node_to] = []
-
     def print_adj_list(self):
         print("Adjacency List:")
         for node in self.adj_list:
@@ -25,8 +22,8 @@ class Graph:
         matrix = [[0] * len(self.nodes) for _ in range(len(self.nodes))]
         node_index = {node: i for i, node in enumerate(sorted(self.nodes))}
         
-        for node_from, connections in self.adj_list.items():
-            for node_to, value in connections:
+        for node_from, i in self.adj_list.items():
+            for node_to, value in i:
                 matrix[node_index[node_from]][node_index[node_to]] = value
         
         for row in matrix:
