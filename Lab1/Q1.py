@@ -15,12 +15,13 @@ class Stack:
 
 def main():
 	queue = Stack()
-	queue.enqueue(1)
-	queue.enqueue(2)
-	queue.enqueue(3)
-	queue.enqueue(4)
+	inp = int(input("Enter element to insert:"))
+	queue.enqueue(inp)
+	inp2 = int(input("Enter element to insert:"))
+	queue.enqueue(inp2)
+	print("Dequeuing element:")
 	print(queue.dequeue())
-	queue.enqueue(5)
+	print("Dequeuing element:")
 	print(queue.dequeue())
 
 if __name__ == "__main__":
