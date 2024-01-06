@@ -1,6 +1,5 @@
 import numpy as np
 
-import numpy as np
 def list(list1,list2):
 	dist =[]
 	for i in range(len(list1)):
