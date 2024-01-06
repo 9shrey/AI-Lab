@@ -1,4 +1,6 @@
 import numpy as np
+
+import numpy as np
 def list(list1,list2):
 	dist =[]
 	for i in range(len(list1)):
@@ -13,10 +15,11 @@ def calc_dist(list1, list2):
 	return dist
 
 def bub_sort(dist):
-	for i in range(len(dist)):
-		for j in range(len(dist)-i-1):
-			dist[j],dist[j+1] = dist[j+1], dist[j]
-
+	n = len(dist)
+	for i in range(n):
+		for j in range(0, n-i-1):
+			if dist[j] > dist[j+1]:
+				dist[j], dist[j+1] = dist[j+1], dist[j]
 	return dist
 
 def main():
