@@ -25,7 +25,7 @@ def inorder(root):
 
 def printPreorder(root):
     if root:
-        print(root.val, end=" "),
+        print(root.val, end=" ")
         printPreorder(root.left)
         printPreorder(root.right)
 

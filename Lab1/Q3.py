@@ -22,8 +22,8 @@ def bub_sort(dist):
 	return dist
 
 def main():
-	list1 = [[1,2],[2,3]]
-	list2 = [[2,4],[9,4]]
+	list1 = [[1,2],[2,3],[4,5]]
+	list2 = [[2,4],[9,4],[3,1]]
 
 	l3 = calc_dist(list1,list2)
 	l4 = bub_sort(l3)
