@@ -36,7 +36,6 @@ def DFSFnc(vertex, visited):
 			stack.append(n)
 		else:
 			if n in stack:
-				stack.pop()
 				while stack[-1] != n:
 					print(stack.pop(), end='* ')
 				print(stack.pop(), end='* ')
