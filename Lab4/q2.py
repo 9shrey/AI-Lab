@@ -28,23 +28,22 @@ class Graph:
                 if n not in visited:
                     queue.append(n)
                     visited.add(n)
-
         print("Acyclic Graph")
+        exit(0)
 
 if __name__ == "__main__":
     g = Graph()
-#     g.addEdge(3, 1)
-#     g.addEdge(1, 4)
-#     g.addEdge(4, 5)
-#     g.addEdge(5, 6)
-#     g.addEdge(2, 3)
+    # g.addEdge(3, 1)
+    # g.addEdge(1, 4)
+    # g.addEdge(4, 5)
+    # g.addEdge(5, 6)
+    # g.addEdge(2, 3)
     g.addEdge(0, 1)
     g.addEdge(0, 2)
     g.addEdge(1, 2)
     g.addEdge(2, 0)
     g.addEdge(2, 3)
     g.addEdge(3, 3)
-
-    print()
     g.BFS(2)
     print()
+
